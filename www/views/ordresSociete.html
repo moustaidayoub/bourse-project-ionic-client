@@ -1,0 +1,14 @@
+<ion-view view-title="BOURSE::Ordres">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-avatar" ng-repeat="o in listOrdres" ">
+        <p>N° : {{o.numeroOrdre}}</p>
+        <p>Date :{{s.dateOrdre | date:"yyyy-MM-dd"}}</p>
+		<p>Nbr Actions : {{o.nombreActions}}</p>
+		<p>Prix Actions : {{o.prixAction}}</p>
+		<p>Type : {{o.typeOrdre}}</p>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll on-infinite="loadMore()"></ion-infinite-scroll>
+    </ion-content>
+  </ion-view>
